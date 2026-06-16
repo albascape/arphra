@@ -17,7 +17,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const siteUrl = "https://arfa.fund";
+const siteUrl = "https://arfacapital.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

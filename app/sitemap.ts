@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const base = "https://arfa.fund";
+const base = "https://arfacapital.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [

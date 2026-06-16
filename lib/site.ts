@@ -1,7 +1,7 @@
 export const site = {
   name: "ARFA",
   tagline: "Independent thinking for private capital",
-  email: "enquiries@arfa.fund",
+  email: "enquiries@arfacapital.com",
 };
 
 export const nav = [

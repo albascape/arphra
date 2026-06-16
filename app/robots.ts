@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://arfa.fund/sitemap.xml",
+    sitemap: "https://arfacapital.com/sitemap.xml",
   };
 }
