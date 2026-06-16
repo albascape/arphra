@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container, SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, CTABand } from "@/components/sections";
+import { images } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Who We Work With",
@@ -42,6 +43,7 @@ export default function WhoWeWorkWithPage() {
         eyebrow="Who We Work With"
         title="Built for clients who value independence"
         intro="ARFA works best with clients who value clarity, discretion and a more structured approach to capital."
+        image={images.cta}
       />
 
       <section>

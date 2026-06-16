@@ -11,7 +11,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -28,21 +28,26 @@ export function Header() {
     };
   }, [open]);
 
+  // Light treatment while sitting over the dark photographic hero; dark once
+  // scrolled onto the light page body.
+  const solid = scrolled || open;
+  const logoColor = solid ? "text-ink" : "text-paper";
+  const lineColor = solid ? "bg-ink" : "bg-paper";
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled || open
+        solid
           ? "border-b border-line-soft bg-paper/85 backdrop-blur-md"
           : "border-b border-transparent bg-transparent"
       }`}
     >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5 sm:px-8 lg:px-10">
-        <Link
-          href="/"
-          className="display text-2xl tracking-[0.18em] text-ink"
-          aria-label="ARFA — home"
-        >
-          {site.name}
+        <Link href="/" className="flex items-center gap-3" aria-label="ARFA — home">
+          <Logo className={solid ? "text-accent" : "text-paper"} />
+          <span className={`display text-2xl tracking-[0.18em] transition-colors ${logoColor}`}>
+            ARFA
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -54,7 +59,13 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={`link-underline text-sm tracking-wide transition-colors ${
-                  active ? "text-ink" : "text-ink-soft hover:text-ink"
+                  solid
+                    ? active
+                      ? "text-ink"
+                      : "text-ink-soft hover:text-ink"
+                    : active
+                      ? "text-paper"
+                      : "text-paper/75 hover:text-paper"
                 }`}
               >
                 {item.label}
@@ -66,7 +77,11 @@ export function Header() {
         <div className="hidden lg:block">
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors duration-300 hover:bg-accent-deep"
+            className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
+              solid
+                ? "bg-ink text-paper hover:bg-accent-deep"
+                : "border border-paper/30 text-paper hover:border-paper hover:bg-paper hover:text-ink"
+            }`}
           >
             Request a Conversation
             <span className="transition-transform duration-300 group-hover:translate-x-0.5">
@@ -84,12 +99,12 @@ export function Header() {
           aria-expanded={open}
         >
           <span
-            className={`h-px w-6 bg-ink transition-all duration-300 ${
+            className={`h-px w-6 transition-all duration-300 ${lineColor} ${
               open ? "translate-y-[6px] rotate-45" : ""
             }`}
           />
           <span
-            className={`h-px w-6 bg-ink transition-all duration-300 ${
+            className={`h-px w-6 transition-all duration-300 ${lineColor} ${
               open ? "-translate-y-[6px] -rotate-45" : ""
             }`}
           />
@@ -121,5 +136,22 @@ export function Header() {
         </nav>
       </div>
     </header>
+  );
+}
+
+/* Minimal interlocking-rings monogram (original mark) ------------------------ */
+function Logo({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+      className={`transition-colors ${className}`}
+      aria-hidden
+    >
+      <circle cx="12" cy="15" r="8" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="18" cy="15" r="8" stroke="currentColor" strokeWidth="1.6" opacity="0.55" />
+    </svg>
   );
 }

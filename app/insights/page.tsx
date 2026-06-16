@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container, Eyebrow, SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, CTABand } from "@/components/sections";
+import { images } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Insights",
@@ -54,6 +55,7 @@ export default function InsightsPage() {
         eyebrow="Insights"
         title="Clarity over noise"
         intro="Selected notes on markets, portfolio construction and private capital thinking — for readers who value substance over reaction."
+        image={images.insights}
       />
 
       {/* Intro + categories */}
