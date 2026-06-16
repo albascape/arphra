@@ -10,7 +10,7 @@ capital strategy, portfolio architecture and independent analytical support.
 - [Next.js 15](https://nextjs.org) (App Router, React 19)
 - [Tailwind CSS v4](https://tailwindcss.com)
 - TypeScript
-- `next/font` (Fraunces + Inter)
+- `next/font` (Newsreader + Inter)
 - Optimised for deployment on [Vercel](https://vercel.com)
 
 ## Pages
@@ -49,10 +49,18 @@ npm run start
 
 ### Design notes
 
-The visual language is deliberately calm and editorial: a warm paper palette, a
-single quiet bronze accent, a Fraunces serif for display type and Inter for body
-copy, generous whitespace, hairline rules and restrained motion. It is an original
-design built in the spirit of a premium boutique — understated, not showy.
+The visual language is institutional and composed: full-bleed dark photographic
+heroes, a classic **Newsreader** serif for display type and Inter for body copy, a
+single confident **blue** accent, and the signature **two-tone heading** (a muted
+grey lead-in resolving into a strong emphasis). Light and dark sections alternate,
+a right-side section-dot navigation tracks scroll position on the home page, and
+circular scroll affordances echo the reference aesthetic. It is an original design
+built in that spirit — not a copy.
+
+**Imagery:** the photographic backgrounds are hotlinked from Unsplash's CDN (see
+`lib/site.ts → images`) and each sits over a solid dark base, so the design
+degrades gracefully if an image fails. Replace them with self-hosted, licensed
+images in `/public` before launch.
 
 ### Contact form
 

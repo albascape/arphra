@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container, SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, CTABand } from "@/components/sections";
+import { images } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
@@ -23,6 +24,7 @@ export default function AboutPage() {
         eyebrow="About"
         title="A more thoughtful approach to private capital"
         intro="ARFA was created to offer a more independent way of thinking about capital decisions — for clients who value clarity, discipline and discretion."
+        image={images.about}
       />
 
       {/* The idea */}

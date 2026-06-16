@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container, Eyebrow, SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { PageHero, CTABand } from "@/components/sections";
+import { images } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -133,6 +134,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="A focused set of services"
         intro="For private investors, entrepreneurs, internationally mobile professionals and families seeking better structure, stronger judgment and more coherent capital decisions."
+        image={images.hero}
       />
 
       {/* Services list */}

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Newsreader, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ScrollTop } from "@/components/ScrollTop";
 
-const fraunces = Fraunces({
+const newsreader = Newsreader({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-fraunces",
-  axes: ["opsz"],
+  variable: "--font-newsreader",
+  style: ["normal", "italic"],
 });
 
 const inter = Inter({
@@ -55,11 +56,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${newsreader.variable} ${inter.variable}`}>
       <body className="min-h-screen bg-paper text-ink antialiased">
         <Header />
         <main>{children}</main>
         <Footer />
+        <ScrollTop />
       </body>
     </html>
   );

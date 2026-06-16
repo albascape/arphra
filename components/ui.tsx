@@ -35,7 +35,7 @@ export function Eyebrow({
 type ButtonProps = {
   href: string;
   children: React.ReactNode;
-  variant?: "solid" | "outline" | "ghost" | "light";
+  variant?: "solid" | "primary" | "outline" | "ghost" | "light";
   className?: string;
 };
 
@@ -45,6 +45,7 @@ export function Button({ href, children, variant = "solid", className = "" }: Bu
 
   const variants: Record<string, string> = {
     solid: "bg-ink text-paper hover:bg-accent-deep",
+    primary: "bg-accent text-paper hover:bg-accent-deep",
     outline:
       "border border-ink/20 text-ink hover:border-ink/50 hover:bg-ink hover:text-paper",
     ghost: "text-ink hover:text-accent-deep",
@@ -62,6 +63,32 @@ export function Button({ href, children, variant = "solid", className = "" }: Bu
         →
       </span>
     </Link>
+  );
+}
+
+/* Two-tone display heading ---------------------------------------------------
+   A muted lead-in that resolves into a strong emphasis — the signature move.
+   Wrap a parent in `.on-dark` for the light-on-dark variant.                  */
+export function TwoToneHeading({
+  lead,
+  strong,
+  size = "lg",
+  className = "",
+}: {
+  lead: string;
+  strong: string;
+  size?: "lg" | "xl";
+  className?: string;
+}) {
+  const sizes: Record<string, string> = {
+    lg: "text-[1.9rem] sm:text-4xl lg:text-[2.9rem]",
+    xl: "text-4xl sm:text-5xl lg:text-[3.5rem]",
+  };
+  return (
+    <h2 className={`display ${sizes[size]} ${className}`}>
+      <span className="heading-muted">{lead} </span>
+      <span className="heading-strong">{strong}</span>
+    </h2>
   );
 }
 
