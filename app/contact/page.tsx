@@ -22,15 +22,15 @@ export default function ContactPage() {
         />
         <Container>
           <Reveal>
-            <Eyebrow className="mb-7 text-accent-bright">Contact</Eyebrow>
+            <Eyebrow className="mb-7 text-accent-bright text-shadow-hero">Contact</Eyebrow>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="display text-4xl text-paper sm:text-5xl lg:text-6xl">
+            <h1 className="display text-4xl text-paper text-shadow-hero sm:text-5xl lg:text-6xl">
               Work with ARFA
             </h1>
           </Reveal>
           <Reveal delay={150}>
-            <p className="lede mt-7 max-w-xl text-paper/75">
+            <p className="lede mt-7 max-w-xl text-paper/90 text-shadow-hero">
               If you are exploring a more thoughtful and independent approach to private
               capital, you are welcome to get in touch.
             </p>

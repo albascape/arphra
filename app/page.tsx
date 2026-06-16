@@ -130,21 +130,21 @@ export default function HomePage() {
       >
         <PhotoBackground
           src={images.hero}
-          overlay="linear-gradient(180deg, rgba(10,13,19,0.72) 0%, rgba(10,13,19,0.55) 40%, rgba(10,13,19,0.82) 100%)"
+          overlay="linear-gradient(180deg, rgba(10,13,19,0.78) 0%, rgba(10,13,19,0.64) 45%, rgba(10,13,19,0.88) 100%)"
         />
         <Container className="pb-28">
           <Reveal>
-            <Eyebrow className="mb-8 text-accent-bright">
+            <Eyebrow className="mb-8 text-accent-bright text-shadow-hero">
               Founder-led boutique · Private capital
             </Eyebrow>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="display max-w-5xl text-[2.9rem] leading-[1.05] text-paper sm:text-6xl lg:text-[5.2rem]">
+            <h1 className="display max-w-5xl text-[2.9rem] leading-[1.05] text-paper text-shadow-hero sm:text-6xl lg:text-[5.2rem]">
               Independent thinking for private capital
             </h1>
           </Reveal>
           <Reveal delay={170}>
-            <p className="lede mt-9 max-w-2xl text-paper/75">
+            <p className="lede mt-9 max-w-2xl text-paper/90 text-shadow-hero">
               ARFA is a founder-led boutique platform focused on private capital
               strategy, portfolio architecture and independent analytical support — for
               those who want greater clarity, stronger structure and a more disciplined
