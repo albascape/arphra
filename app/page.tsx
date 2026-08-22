@@ -107,8 +107,8 @@ export default function HomePage() {
               <Button href="/insights" variant="primary">
                 Read Insights
               </Button>
-              <Button href="/legal" variant="light">
-                Scope &amp; Notice
+              <Button href="/about" variant="light">
+                About ARFA
               </Button>
             </div>
           </Reveal>

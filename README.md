@@ -18,6 +18,9 @@ Practical rules when editing content:
 
 - No services, engagement, pricing, client-intake or "book a call" pages.
 - No client-targeting copy ("who we work with", "our clients", enquiry forms).
+- Contact stays editorial: correspondence about published material and an
+  email-only distribution list. Never collect a reader's circumstances,
+  holdings or objectives — that is intake, and intake is the regulated part.
 - No buy/sell/hold views on specific securities or issuers (market abuse rules).
 - Keep all commentary general — never tailored to an individual reader.
 - The disclaimer in `components/Footer.tsx` and the notice at `/legal` must stay
@@ -33,11 +36,13 @@ Practical rules when editing content:
 
 ## Pages
 
-| Route       | Page                              |
-| ----------- | --------------------------------- |
-| `/`         | Home                              |
-| `/insights` | Insights (general research notes) |
-| `/legal`    | Notice (scope, disclaimer, terms) |
+| Route       | Page                                     |
+| ----------- | ---------------------------------------- |
+| `/`         | Home                                     |
+| `/about`    | About (purpose, philosophy, standards)   |
+| `/insights` | Insights (general research notes)        |
+| `/contact`  | Contact (correspondence + subscribe)     |
+| `/legal`    | Notice (scope, disclaimer, terms)        |
 
 ## Local development
 
@@ -76,8 +81,14 @@ built in that spirit — not a copy.
 degrades gracefully if an image fails. Replace them with self-hosted, licensed
 images in `/public` before launch.
 
-### Correspondence
+### Correspondence and the distribution list
 
-There is no contact form and no enquiry intake by design — an intake flow reads
-as client solicitation. The site exposes a single editorial mailbox
-(`lib/site.ts → site.email`) for correspondence about published material.
+There is no enquiry intake by design — a form asking about a reader's situation
+reads as client solicitation. `/contact` offers an editorial mailbox
+(`lib/site.ts → site.email`) and `components/SubscribeForm.tsx`, which collects
+an email address and nothing else.
+
+Both currently use a `mailto:` fallback with a confirmation state. To wire the
+subscribe form to a real backend (Resend, Buttondown, a Next.js route handler),
+replace the submit handler in `components/SubscribeForm.tsx` — and keep the form
+to a single email field.

@@ -2,7 +2,9 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const footerLinks = [
+  { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
+  { label: "Contact", href: "/contact" },
   { label: "Notice", href: "/legal" },
 ];
 
@@ -50,6 +52,14 @@ export function Footer() {
                   >
                     {site.email}
                   </a>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="text-sm text-paper/70 transition-colors hover:text-paper"
+                  >
+                    Join the distribution list
+                  </Link>
                 </li>
                 <li className="text-sm leading-relaxed text-paper/45">
                   Correspondence about published material only.
