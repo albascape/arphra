@@ -2,12 +2,8 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const footerLinks = [
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Who We Work With", href: "/who-we-work-with" },
-  { label: "How We Work", href: "/how-we-work" },
   { label: "Insights", href: "/insights" },
-  { label: "Contact", href: "/contact" },
+  { label: "Notice", href: "/legal" },
 ];
 
 export function Footer() {
@@ -23,8 +19,8 @@ export function Footer() {
               {site.tagline}
             </p>
             <p className="mt-5 text-sm leading-relaxed text-paper/55">
-              Selective strategic support for entrepreneurs, private investors,
-              internationally mobile professionals and families.
+              An independent publication of general research and commentary. No advisory,
+              portfolio management or client services are offered.
             </p>
           </div>
 
@@ -45,7 +41,7 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <p className="eyebrow text-paper/40">Enquiries</p>
+              <p className="eyebrow text-paper/40">Editorial</p>
               <ul className="mt-5 space-y-3">
                 <li>
                   <a
@@ -55,13 +51,8 @@ export function Footer() {
                     {site.email}
                   </a>
                 </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-sm text-paper/70 transition-colors hover:text-paper"
-                  >
-                    Request a Conversation
-                  </Link>
+                <li className="text-sm leading-relaxed text-paper/45">
+                  Correspondence about published material only.
                 </li>
               </ul>
             </div>
@@ -70,10 +61,19 @@ export function Footer() {
 
         <div className="mt-16 border-t border-night-line pt-8">
           <p className="max-w-3xl text-xs leading-relaxed text-paper/40">
-            The information on this website is provided for general informational
-            purposes only and does not constitute an offer, solicitation or personalised
-            investment advice. Any engagement with {site.name} is subject to separate
-            discussion and scope.
+            {site.name} is an independent research publication. Everything on this website
+            is general information and commentary for educational purposes only. It is not
+            investment, financial, tax or legal advice, not a personal recommendation, and
+            not an offer or solicitation to buy or sell any financial instrument. {site.name}{" "}
+            is not authorised or regulated by the Cyprus Securities and Exchange Commission
+            or by any other financial regulator, and provides no investment services. Past
+            performance is not a reliable indicator of future results, and the value of
+            investments can fall as well as rise. Seek advice from an appropriately
+            licensed professional before acting on anything you read here. See the full{" "}
+            <Link href="/legal" className="text-paper/60 underline underline-offset-2">
+              notice
+            </Link>
+            .
           </p>
           <p className="mt-6 text-xs text-paper/40">
             © {new Date().getFullYear()} {site.name}. All rights reserved.

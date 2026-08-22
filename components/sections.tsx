@@ -40,13 +40,13 @@ export function PageHero({
   );
 }
 
-/* Closing call-to-action band — photographic --------------------------------- */
-export function CTABand({
-  eyebrow = "Begin",
+/* Closing editorial band ----------------------------------------------------- */
+export function ClosingBand({
+  eyebrow = "Read",
   title,
   body,
-  buttonLabel = "Request a Conversation",
-  buttonHref = "/contact",
+  buttonLabel = "Read Insights",
+  buttonHref = "/insights",
 }: {
   eyebrow?: string;
   title: string;
