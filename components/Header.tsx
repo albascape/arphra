@@ -76,14 +76,14 @@ export function Header() {
 
         <div className="hidden lg:block">
           <Link
-            href="/insights"
+            href="/contact"
             className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
               solid
                 ? "bg-ink text-paper hover:bg-accent-deep"
                 : "border border-paper/30 text-paper hover:border-paper hover:bg-paper hover:text-ink"
             }`}
           >
-            Read Insights
+            Subscribe
             <span className="transition-transform duration-300 group-hover:translate-x-0.5">
               →
             </span>
@@ -128,10 +128,10 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/insights"
+            href="/contact"
             className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3.5 text-sm font-medium text-paper"
           >
-            Read Insights →
+            Subscribe →
           </Link>
         </nav>
       </div>

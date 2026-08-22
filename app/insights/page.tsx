@@ -122,6 +122,7 @@ export default function InsightsPage() {
           <Reveal delay={120}>
             <p className="mt-10 max-w-xl text-sm leading-relaxed text-ink-faint">
               Notes are published irregularly, when there is something worth writing down.
+              To receive them as they appear, join the distribution list below.
             </p>
           </Reveal>
         </Container>
@@ -159,6 +160,17 @@ export default function InsightsPage() {
                   {site.email}
                 </a>
               </p>
+              <div className="pt-2">
+                <a
+                  href="/contact"
+                  className="group inline-flex items-center gap-2.5 rounded-full border border-paper/25 px-7 py-3.5 text-sm font-medium text-paper transition-all duration-300 hover:border-paper/70 hover:bg-paper hover:text-ink"
+                >
+                  Join the list
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </a>
+              </div>
             </Reveal>
           </div>
         </Container>
@@ -168,8 +180,8 @@ export default function InsightsPage() {
         eyebrow="Read"
         title="Written to clarify, not to persuade"
         body="Selective, general commentary on markets and portfolio structure — published when there is something worth saying."
-        buttonLabel="Scope & Notice"
-        buttonHref="/legal"
+        buttonLabel="Join the list"
+        buttonHref="/contact"
       />
     </>
   );
