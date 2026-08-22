@@ -24,6 +24,7 @@ const sections: { heading: string; paragraphs: string[] }[] = [
       "Nothing on this site constitutes investment advice, financial advice, tax advice, legal advice or a personal recommendation of any kind.",
       "All content is general in nature. It does not take account of the objectives, financial situation, knowledge, experience, tax position or particular needs of any reader, and it must not be relied upon as if it did.",
       "No content here is a recommendation, invitation or inducement to buy, sell, subscribe for or hold any security, financial instrument, fund, structure or strategy.",
+      "Where a note discusses an asset class, market or instrument type, it is general commentary and is not intended as an investment recommendation within the meaning of Regulation (EU) No 596/2014 on market abuse.",
     ],
   },
   {
@@ -38,7 +39,8 @@ const sections: { heading: string; paragraphs: string[] }[] = [
     heading: "4. No offer or solicitation",
     paragraphs: [
       "This site is not an offer, solicitation or marketing communication in respect of any financial instrument or service, and it is not directed at any person in any jurisdiction where such publication would be contrary to local law or regulation.",
-      "No client relationship is created by reading this site, by subscribing to anything published on it, or by corresponding with the address below.",
+      "Nothing on this site is sold. There is no fee, subscription charge, retainer or commission of any kind, and no advertising, sponsorship or paid placement.",
+      "No client relationship is created by reading this site, by joining the distribution list, or by corresponding with the address below. The distribution list is free, carries only published notes, and an address on it is used for nothing else.",
     ],
   },
   {
