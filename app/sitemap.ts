@@ -3,15 +3,7 @@ import type { MetadataRoute } from "next";
 const base = "https://arfacapital.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [
-    "",
-    "/about",
-    "/services",
-    "/who-we-work-with",
-    "/how-we-work",
-    "/insights",
-    "/contact",
-  ];
+  const routes = ["", "/insights", "/legal"];
 
   return routes.map((route) => ({
     url: `${base}${route}`,

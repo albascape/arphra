@@ -23,32 +23,32 @@ const siteUrl = "https://arfacapital.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "ARFA — Independent thinking for private capital",
+    default: "ARFA — Independent research on markets and portfolio structure",
     template: "%s — ARFA",
   },
   description:
-    "ARFA is a founder-led boutique platform focused on private capital strategy, portfolio architecture and independent analytical support for entrepreneurs, private investors, internationally mobile professionals and families.",
+    "ARFA is an independent research publication on markets, portfolio construction and the structure of long-term capital. General commentary only — not investment advice, and no advisory or client services.",
   keywords: [
-    "private capital",
-    "portfolio architecture",
-    "strategic asset allocation",
-    "independent advisory",
-    "boutique wealth strategy",
-    "second opinion",
+    "market research",
+    "portfolio construction",
+    "asset allocation research",
+    "macro commentary",
+    "investment methodology",
+    "financial writing",
   ],
   openGraph: {
-    title: "ARFA — Independent thinking for private capital",
+    title: "ARFA — Independent research on markets and portfolio structure",
     description:
-      "A selective, founder-led boutique for clients who want a calmer, sharper and more structured approach to capital.",
+      "General research notes on markets, portfolio construction and the structure of long-term capital. Educational commentary only.",
     url: siteUrl,
     siteName: "ARFA",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ARFA — Independent thinking for private capital",
+    title: "ARFA — Independent research on markets and portfolio structure",
     description:
-      "A selective, founder-led boutique for clients who want a calmer, sharper and more structured approach to capital.",
+      "General research notes on markets, portfolio construction and the structure of long-term capital. Educational commentary only.",
   },
 };
 
