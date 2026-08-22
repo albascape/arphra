@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/lib/site";
 
@@ -75,7 +76,12 @@ export function SubscribeForm() {
       </form>
       <p className="mt-7 text-xs leading-relaxed text-ink-faint">
         Only an email address is collected, and it is used for nothing but sending the
-        notes. Subscribing creates no client relationship and is not a request for advice.
+        notes. The list is free. Subscribing creates no client relationship and is not a
+        request for advice —{" "}
+        <Link href="/legal" className="link-underline text-ink-soft">
+          see the notice
+        </Link>
+        .
       </p>
     </div>
   );
