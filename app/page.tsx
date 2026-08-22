@@ -17,28 +17,28 @@ const dotSections = [
 
 const themes = [
   {
-    title: "Portfolio Architecture",
-    body: "How allocation frameworks are constructed, what they quietly assume, and where those assumptions tend to break.",
+    title: "What allocation frameworks quietly assume",
+    body: "Every framework carries assumptions about correlation, horizon and regime. They are rarely stated, and they are usually where the framework breaks.",
   },
   {
-    title: "Asset Allocation",
-    body: "Distribution across asset classes, currencies, risks and market regimes, treated as a design problem rather than a product question.",
+    title: "What diversification does and does not buy",
+    body: "Diversification is treated as a solved problem. Its limits — correlation drift, shared funding conditions, the same trade wearing four labels — are less examined.",
   },
   {
-    title: "Liquidity & Structure",
-    body: "Liquidity read as a design constraint — when capital can actually be accessed, and what that costs — rather than as a residual.",
+    title: "Why liquidity behaves as a design constraint",
+    body: "When capital can actually be accessed, and what that access costs, decides more outcomes than the return assumption sitting above it.",
   },
   {
-    title: "Currencies & Cross-Border Capital",
-    body: "Why currency behaves as a structural exposure rather than a side effect once capital sits across several jurisdictions.",
+    title: "How concentration gets measured, and mismeasured",
+    body: "Concentration accumulates quietly and the standard measures understate it. Why they do, and what a more honest measure would have to capture.",
   },
   {
-    title: "Risk & Concentration",
-    body: "How concentration accumulates, how it is usually measured, and why the measurement often understates it.",
+    title: "Currency as a structural exposure",
+    body: "Once capital sits across jurisdictions, currency stops being a side effect of the holdings and becomes one of the largest positions in the book.",
   },
   {
-    title: "Macro Regimes",
-    body: "Reading rate, inflation and liquidity regimes without over-fitting a portfolio to whichever one is currently loudest.",
+    title: "Reading regimes without over-fitting to them",
+    body: "Rate, inflation and liquidity regimes are worth understanding and dangerous to extrapolate. The distinction is the whole discipline.",
   },
 ];
 
@@ -177,26 +177,22 @@ export default function HomePage() {
         <Container className="py-24 lg:py-32">
           <Reveal>
             <Eyebrow className="mb-7">Themes</Eyebrow>
-            <TwoToneHeading lead="What gets" strong="written about." className="max-w-2xl" />
+            <TwoToneHeading lead="Questions worth" strong="writing about." className="max-w-2xl" />
           </Reveal>
-          <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-x-14 gap-y-12 sm:grid-cols-2">
             {themes.map((item, i) => (
-              <Reveal
-                key={item.title}
-                delay={(i % 3) * 80}
-                className="group bg-paper p-9 transition-colors duration-500 hover:bg-paper-deep"
-              >
-                <span className="display text-2xl text-accent/45">0{i + 1}</span>
-                <h3 className="display mt-5 text-xl text-ink">{item.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+              <Reveal key={item.title} delay={(i % 2) * 90}>
+                <div className="rule-accent mb-5" />
+                <h3 className="display text-xl leading-snug text-ink">{item.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-ink-soft">{item.body}</p>
               </Reveal>
             ))}
           </div>
           <Reveal delay={160}>
             <p className="mt-10 max-w-xl text-sm leading-relaxed text-ink-faint">
-              These are research themes, not services. Nothing on this site is offered as
-              a personal service, and no individual portfolio, instrument or transaction
-              is reviewed or recommended here.
+              These are subjects the writing returns to — not services. Nothing here is
+              offered as a personal service, and no individual portfolio, instrument or
+              transaction is reviewed, assessed or recommended on this site.
             </p>
           </Reveal>
         </Container>
