@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button, Container, Eyebrow, TwoToneHeading } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
-import { CTABand } from "@/components/sections";
+import { ClosingBand } from "@/components/sections";
 import { PhotoBackground } from "@/components/PhotoBackground";
 import { SectionDots } from "@/components/SectionDots";
 import { images } from "@/lib/site";
@@ -9,113 +9,64 @@ import { images } from "@/lib/site";
 const dotSections = [
   { id: "top", label: "Home" },
   { id: "approach", label: "Approach" },
-  { id: "capabilities", label: "Capabilities" },
-  { id: "clients", label: "Clients" },
-  { id: "why", label: "Why ARFA" },
-  { id: "process", label: "Process" },
-  { id: "engagements", label: "Engagements" },
+  { id: "themes", label: "Themes" },
+  { id: "method", label: "Method" },
   { id: "insights", label: "Insights" },
+  { id: "scope", label: "Scope" },
 ];
 
-const helps = [
+const themes = [
   {
     title: "Portfolio Architecture",
-    body: "Clearer portfolio logic, more coherent asset allocation and a stronger balance between growth, liquidity, resilience and long-term compounding.",
+    body: "How allocation frameworks are constructed, what they quietly assume, and where those assumptions tend to break.",
   },
   {
-    title: "Strategic Asset Allocation",
-    body: "A more deliberate framework for how capital should be distributed across asset classes, currencies, risks and market regimes.",
+    title: "Asset Allocation",
+    body: "Distribution across asset classes, currencies, risks and market regimes, treated as a design problem rather than a product question.",
   },
   {
-    title: "Independent Second Opinion",
-    body: "Thoughtful external review of existing portfolios, bank proposals, wealth structures, investment ideas and strategic decisions.",
+    title: "Liquidity & Structure",
+    body: "Liquidity read as a design constraint — when capital can actually be accessed, and what that costs — rather than as a residual.",
   },
   {
-    title: "Capital Structure & Liquidity",
-    body: "A more intelligent framework for organising capital across goals, horizons, liquidity layers and financial complexity.",
+    title: "Currencies & Cross-Border Capital",
+    body: "Why currency behaves as a structural exposure rather than a side effect once capital sits across several jurisdictions.",
   },
   {
-    title: "Ongoing Advisory",
-    body: "High-trust, ongoing support for clients who value direct access to an external strategic thinking partner around private capital.",
-  },
-];
-
-const builtFor = [
-  {
-    title: "Entrepreneurs & business owners",
-    body: "A more structured approach to personal capital, liquidity, concentrated wealth and long-term allocation.",
+    title: "Risk & Concentration",
+    body: "How concentration accumulates, how it is usually measured, and why the measurement often understates it.",
   },
   {
-    title: "Private investors",
-    body: "A more mature, independent and institutional framework behind decisions you already make.",
-  },
-  {
-    title: "International professionals",
-    body: "Greater order for those living across borders and managing assets in multiple currencies.",
-  },
-  {
-    title: "Families & capital decision-makers",
-    body: "Discretion, thoughtful support and a disciplined approach to preserving and compounding capital.",
+    title: "Macro Regimes",
+    body: "Reading rate, inflation and liquidity regimes without over-fitting a portfolio to whichever one is currently loudest.",
   },
 ];
 
-const why = [
+const method = [
   {
-    title: "Founder-led decision making",
-    body: "Direct accountability, senior judgment and genuine strategic involvement — not a generic advisory machine.",
+    title: "Framework before conclusion",
+    body: "The reasoning is written out so it can be examined and disagreed with. A conclusion without a visible framework is an opinion, not analysis.",
   },
   {
-    title: "Institutional quality, boutique attention",
-    body: "Rigorous portfolio thinking with a more personal, selective and less bureaucratic client experience.",
+    title: "Assumptions stated",
+    body: "Every framework rests on assumptions about horizon, liquidity, correlation and regime. Those are named rather than buried.",
   },
   {
     title: "Independent by design",
-    body: "No product shelf, no house-product pressure, no financial theatre.",
+    body: "No product shelf, no house-product pressure, no financial theatre. Nothing published here is written to move an inventory.",
   },
   {
-    title: "Global markets perspective",
-    body: "A cross-asset view of capital, sensitive to liquidity, currencies, fixed income, equities and macro conditions.",
+    title: "General, never personal",
+    body: "Everything here is general and educational. It is not tailored to anyone's circumstances and is not a recommendation to buy, sell or hold anything.",
   },
   {
-    title: "High-touch, low-bureaucracy",
-    body: "The value of a boutique is not scale. It is attention, flexibility, directness and tailored thinking.",
+    title: "Slow cadence",
+    body: "Notes appear when there is something worth writing down, not on a publishing schedule built to fill a calendar.",
   },
   {
-    title: "Thoughtful and discreet",
-    body: "No noise, no aggressive promises, no performance slogans. Just clear thinking and intellectual honesty.",
+    title: "Open to correction",
+    body: "Where a published view turns out to be wrong, the correction is more interesting than the original note. It gets written too.",
   },
-];
-
-const steps = [
-  {
-    n: "01",
-    title: "Understand",
-    body: "We begin with context: objectives, current structure, constraints, liquidity, currencies, existing arrangements and key concerns.",
-  },
-  {
-    n: "02",
-    title: "Diagnose",
-    body: "We develop an independent view of what is working, what is exposed, what is inconsistent and what deserves to be rethought.",
-  },
-  {
-    n: "03",
-    title: "Architect",
-    body: "We shape a clearer strategic framework: allocation logic, capital structure, priorities, decision principles and next steps.",
-  },
-  {
-    n: "04",
-    title: "Support",
-    body: "Where relevant, the relationship continues through ongoing advisory, periodic review and high-quality analytical support.",
-  },
-];
-
-const ways = [
-  ["Strategic Review", "A deep, one-off review of your capital structure, positioning and key strategic decisions."],
-  ["Portfolio Diagnostic", "An independent assessment of an existing portfolio — structure, risks, logic and areas for improvement."],
-  ["Independent Second Opinion", "A professional external view on proposals from banks, brokers, wealth managers or specific ideas."],
-  ["Capital Architecture", "A broader review of how wealth is organised across accounts, institutions, liquidity layers and priorities."],
-  ["Ongoing Advisory", "An ongoing relationship for clients who want a trusted strategic partner around private capital."],
-  ["Tailored Research", "Targeted analytical work built around a specific client question, where generic advice is not enough."],
 ];
 
 export default function HomePage() {
@@ -135,29 +86,29 @@ export default function HomePage() {
         <Container className="pb-28">
           <Reveal>
             <Eyebrow className="mb-8 text-accent-bright text-shadow-hero">
-              Founder-led boutique · Private capital
+              Independent research · Markets &amp; portfolio thinking
             </Eyebrow>
           </Reveal>
           <Reveal delay={80}>
             <h1 className="display max-w-5xl text-[2.9rem] leading-[1.05] text-paper text-shadow-hero sm:text-6xl lg:text-[5.2rem]">
-              Independent thinking for private capital
+              Independent thinking, written down
             </h1>
           </Reveal>
           <Reveal delay={170}>
             <p className="lede mt-9 max-w-2xl text-paper/90 text-shadow-hero">
-              ARFA is a founder-led boutique platform focused on private capital
-              strategy, portfolio architecture and independent analytical support — for
-              those who want greater clarity, stronger structure and a more disciplined
-              approach to capital decisions.
+              ARFA is an independent research and writing project on markets, portfolio
+              construction and the structure of long-term capital. It publishes analysis
+              and methodology — nothing more. It does not provide investment advice,
+              manage assets or take on clients.
             </p>
           </Reveal>
           <Reveal delay={250}>
             <div className="mt-11 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button href="/services" variant="primary">
-                Explore Services
+              <Button href="/insights" variant="primary">
+                Read Insights
               </Button>
-              <Button href="/contact" variant="light">
-                Request a Conversation
+              <Button href="/about" variant="light">
+                About ARFA
               </Button>
             </div>
           </Reveal>
@@ -193,42 +144,43 @@ export default function HomePage() {
         <Container className="py-24 lg:py-32">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <Reveal>
-              <Eyebrow className="mb-7">The case for ARFA</Eyebrow>
+              <Eyebrow className="mb-7">Why this exists</Eyebrow>
               <TwoToneHeading
                 size="xl"
                 lead="Private capital deserves"
                 strong="better thinking."
               />
             </Reveal>
-            <Reveal delay={120} className="space-y-6 text-lg leading-relaxed text-ink-soft lg:pt-3">
+            <Reveal delay={120} className="space-y-6 text-lg leading-relaxed text-ink-soft">
               <p>
-                Private capital often sits between two unsatisfactory worlds: public
-                market noise on one side, and product-led financial advice on the other.
-                ARFA was created as an alternative.
+                Writing on private capital tends to sit between two unsatisfactory worlds:
+                public market noise on one side, and product-led financial commentary on
+                the other. ARFA was started as an alternative to both.
               </p>
               <p>
-                Rather than treating wealth as a collection of disconnected products, we
-                look at it as a system — shaped by objectives, liquidity, time horizon,
-                currencies, risk and changing market conditions.
+                Rather than treating capital as a collection of disconnected products, the
+                writing here looks at it as a system — shaped by objectives, liquidity,
+                time horizon, currencies, risk and changing market conditions.
               </p>
               <p className="text-ink">
-                The aim is not to sell financial inventory. It is to help clients
-                structure, preserve and compound capital with greater discipline.
+                The aim is not to tell anyone what to buy. It is to make the underlying
+                reasoning visible, so a reader can weigh it, argue with it, and take it to
+                their own regulated adviser.
               </p>
             </Reveal>
           </div>
         </Container>
       </section>
 
-      {/* ---------------------------------------------------- What ARFA helps with */}
-      <section id="capabilities" className="bg-paper scroll-mt-24">
+      {/* -------------------------------------------------------------- Themes */}
+      <section id="themes" className="bg-paper scroll-mt-24">
         <Container className="py-24 lg:py-32">
           <Reveal>
-            <Eyebrow className="mb-7">Capabilities</Eyebrow>
-            <TwoToneHeading lead="What ARFA" strong="helps with." className="max-w-2xl" />
+            <Eyebrow className="mb-7">Themes</Eyebrow>
+            <TwoToneHeading lead="What gets" strong="written about." className="max-w-2xl" />
           </Reveal>
           <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-            {helps.map((item, i) => (
+            {themes.map((item, i) => (
               <Reveal
                 key={item.title}
                 delay={(i % 3) * 80}
@@ -239,75 +191,20 @@ export default function HomePage() {
                 <p className="mt-4 text-sm leading-relaxed text-ink-soft">{item.body}</p>
               </Reveal>
             ))}
-            <Reveal
-              delay={160}
-              className="flex flex-col justify-between bg-accent p-9 text-paper"
-            >
-              <p className="display text-xl leading-snug text-paper">
-                A focused set of services, shaped around your situation.
-              </p>
-              <Link
-                href="/services"
-                className="link-underline mt-8 inline-flex w-fit items-center gap-2 text-sm text-paper"
-              >
-                View all services <span aria-hidden>→</span>
-              </Link>
-            </Reveal>
           </div>
-        </Container>
-      </section>
-
-      {/* ------------------------------------------------------- Who it's built for */}
-      <section id="clients" className="border-y border-line-soft bg-paper-deep scroll-mt-24">
-        <Container className="py-24 lg:py-32">
-          <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-            <Reveal>
-              <Eyebrow className="mb-7">Clients</Eyebrow>
-              <TwoToneHeading lead="Who ARFA is" strong="built for." />
-              <p className="mt-7 max-w-sm text-base leading-relaxed text-ink-soft">
-                We work with a small number of clients who value independence, clarity and
-                a more structured approach to capital.
-              </p>
-            </Reveal>
-            <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
-              {builtFor.map((item, i) => (
-                <Reveal key={item.title} delay={(i % 2) * 90}>
-                  <div className="rule-accent mb-5" />
-                  <h3 className="display text-lg text-ink">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.body}</p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* ------------------------------------------------------------------ Why ARFA */}
-      <section id="why" className="bg-paper scroll-mt-24">
-        <Container className="py-24 lg:py-32">
-          <Reveal>
-            <Eyebrow className="mb-7">Why ARFA</Eyebrow>
-            <TwoToneHeading
-              lead="The advantages of"
-              strong="a boutique."
-              className="max-w-2xl"
-            />
+          <Reveal delay={160}>
+            <p className="mt-10 max-w-xl text-sm leading-relaxed text-ink-faint">
+              These are research themes, not services. Nothing on this site is offered as
+              a personal service, and no individual portfolio, instrument or transaction
+              is reviewed or recommended here.
+            </p>
           </Reveal>
-          <div className="mt-16 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {why.map((item, i) => (
-              <Reveal key={item.title} delay={(i % 3) * 80}>
-                <div className="rule-accent mb-5" />
-                <h3 className="display text-lg text-ink">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.body}</p>
-              </Reveal>
-            ))}
-          </div>
         </Container>
       </section>
 
-      {/* ----------------------------------------------------------- How ARFA works */}
+      {/* -------------------------------------------------------------- Method */}
       <section
-        id="process"
+        id="method"
         className="photo-host on-dark relative overflow-hidden text-paper scroll-mt-0"
       >
         <PhotoBackground
@@ -317,58 +214,15 @@ export default function HomePage() {
         />
         <Container className="py-24 lg:py-32">
           <Reveal>
-            <Eyebrow className="mb-7 text-accent-bright">Process</Eyebrow>
-            <TwoToneHeading lead="How ARFA" strong="works." className="max-w-2xl" />
+            <Eyebrow className="mb-7 text-accent-bright">Method</Eyebrow>
+            <TwoToneHeading lead="How the work" strong="is framed." className="max-w-2xl" />
           </Reveal>
-          <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-night-line bg-night-line sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step, i) => (
-              <Reveal key={step.n} delay={i * 90} className="bg-night-soft/80 p-8 backdrop-blur-sm lg:p-9">
-                <span className="display text-4xl text-accent-bright">{step.n}</span>
-                <h3 className="display mt-6 text-xl text-paper">{step.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-paper/60">{step.body}</p>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* ------------------------------------------------- Ways to work with ARFA */}
-      <section id="engagements" className="border-b border-line-soft bg-paper scroll-mt-24">
-        <Container className="py-24 lg:py-32">
-          <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
-            <Reveal>
-              <Eyebrow className="mb-7">Engagements</Eyebrow>
-              <TwoToneHeading lead="Ways to work" strong="with ARFA." />
-            </Reveal>
-            <Reveal delay={100}>
-              <Button href="/services" variant="ghost">
-                View Services
-              </Button>
-            </Reveal>
-          </div>
-          <div className="mt-14 divide-y divide-line-soft border-t border-line-soft">
-            {ways.map(([title, body], i) => (
-              <Reveal key={title} delay={(i % 2) * 70}>
-                <Link
-                  href="/services"
-                  className="group grid gap-3 py-7 sm:grid-cols-[0.5fr_1fr_auto] sm:items-center sm:gap-8"
-                >
-                  <span className="display text-sm text-accent/60">0{i + 1}</span>
-                  <div className="sm:flex sm:items-baseline sm:gap-8">
-                    <h3 className="display text-xl text-ink transition-colors group-hover:text-accent sm:w-64 sm:shrink-0">
-                      {title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:mt-0">
-                      {body}
-                    </p>
-                  </div>
-                  <span
-                    aria-hidden
-                    className="hidden text-ink-faint transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent sm:block"
-                  >
-                    →
-                  </span>
-                </Link>
+          <div className="mt-16 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {method.map((item, i) => (
+              <Reveal key={item.title} delay={(i % 3) * 80}>
+                <div className="rule-accent mb-5" />
+                <h3 className="display text-lg text-paper">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-paper/60">{item.body}</p>
               </Reveal>
             ))}
           </div>
@@ -376,7 +230,7 @@ export default function HomePage() {
       </section>
 
       {/* ------------------------------------------------------- Selected insights */}
-      <section id="insights" className="bg-paper-deep scroll-mt-24">
+      <section id="insights" className="border-y border-line-soft bg-paper-deep scroll-mt-24">
         <Container className="py-24 lg:py-32">
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
             <Reveal>
@@ -385,7 +239,7 @@ export default function HomePage() {
               <div className="mt-7 max-w-lg space-y-5 text-base leading-relaxed text-ink-soft">
                 <p>
                   ARFA publishes selective commentary on markets, portfolio construction,
-                  macro developments and private capital thinking.
+                  macro developments and the structure of long-term capital.
                 </p>
                 <p>
                   The goal is not to react to every market move, but to focus on what
@@ -399,7 +253,7 @@ export default function HomePage() {
               </div>
             </Reveal>
             <Reveal delay={140} className="space-y-4">
-              {["Market Notes", "Portfolio Essays", "Strategic Views", "Thematic Deep Dives"].map(
+              {["Market Notes", "Portfolio Essays", "Methodology", "Thematic Deep Dives"].map(
                 (cat) => (
                   <div
                     key={cat}
@@ -417,10 +271,44 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* --------------------------------------------------------------- Final CTA */}
-      <CTABand
-        title="Serious capital benefits from clear thinking"
-        body="If you are looking for a more thoughtful, independent and better-structured approach to private capital, ARFA may be the right place to begin."
+      {/* ------------------------------------------------------------------ Scope */}
+      <section id="scope" className="bg-paper scroll-mt-24">
+        <Container className="py-24 lg:py-32">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+            <Reveal>
+              <Eyebrow className="mb-7">Scope</Eyebrow>
+              <TwoToneHeading lead="What this site" strong="is not." />
+            </Reveal>
+            <Reveal delay={120} className="space-y-6 text-lg leading-relaxed text-ink-soft">
+              <p>
+                ARFA is a publication. It is not an investment firm, and it is not
+                authorised or regulated by the Cyprus Securities and Exchange Commission
+                or by any other financial regulator.
+              </p>
+              <p>
+                Nothing published here is investment advice, a personal recommendation, an
+                offer, or an invitation to engage in any transaction. No advisory,
+                portfolio management, second-opinion or client service of any kind is
+                offered through this site.
+              </p>
+              <p className="text-ink">
+                Readers who need advice on their own circumstances should speak to an
+                appropriately licensed and regulated professional.
+              </p>
+              <p>
+                <Link href="/legal" className="link-underline text-ink">
+                  Read the full notice
+                </Link>
+              </p>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      <ClosingBand
+        eyebrow="Read"
+        title="Clear thinking, published slowly"
+        body="Notes on markets, portfolio construction and the structure of long-term capital — general in nature, and written to clarify rather than to persuade."
       />
     </>
   );
