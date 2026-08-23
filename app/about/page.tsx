@@ -1,20 +1,48 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Container, SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
-import { PageHero, CTABand } from "@/components/sections";
+import { PageHero, ClosingBand } from "@/components/sections";
 import { images } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "ARFA was created to offer a more thoughtful and independent approach to private capital decisions — a founder-led boutique focused on strategy, structure and discretion.",
+    "ARFA is an independent research publication on markets, portfolio construction and the structure of long-term capital. What it is for, what it believes, and how it is written.",
 };
 
 const philosophy = [
-  ["Clarity over noise", "Important decisions should not be driven by market chatter or financial theatre."],
-  ["Structure over improvisation", "A sound portfolio is designed, not assembled at random over time."],
-  ["Independence over product bias", "Judgment should begin with the client’s situation, not with what happens to be available for sale."],
-  ["Discipline over reaction", "Capital compounds best when decisions are made with perspective, process and restraint."],
+  ["Clarity over noise", "Important questions should not be answered by market chatter or financial theatre."],
+  ["Structure over improvisation", "A sound portfolio is designed. Most are assembled at random, one decision at a time."],
+  ["Independence over product bias", "Reasoning should begin with the problem, not with whatever happens to be available for sale."],
+  ["Discipline over reaction", "Capital compounds best where decisions are made with perspective, process and restraint."],
+];
+
+const standards = [
+  {
+    title: "Nothing here is commissioned",
+    body: "No sponsorship, no advertising, no affiliate links, no paid placements. Nothing published here is written to move an inventory or to please a counterparty.",
+  },
+  {
+    title: "General, never personal",
+    body: "Content is written for a general readership. It is not tailored to any individual's circumstances, and it does not recommend buying, selling or holding any specific security or instrument.",
+  },
+  {
+    title: "Sources are named",
+    body: "Where an argument depends on data, the data and its source are stated so a reader can check the work rather than take it on trust.",
+  },
+  {
+    title: "Assumptions are visible",
+    body: "Every framework rests on assumptions about horizon, liquidity, correlation and regime. Those are written out rather than buried in a conclusion.",
+  },
+  {
+    title: "Corrections are published",
+    body: "Errors are corrected openly and dated, not quietly edited away. Where a published view turns out to be wrong, the correction is usually the more interesting note.",
+  },
+  {
+    title: "Interests are disclosed",
+    body: "Where a note touches an area in which the author has a personal interest, that is disclosed within the note itself.",
+  },
 ];
 
 export default function AboutPage() {
@@ -22,8 +50,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        title="A more thoughtful approach to private capital"
-        intro="ARFA was created to offer a more independent way of thinking about capital decisions — for clients who value clarity, discipline and discretion."
+        title="A publication, and nothing beyond one"
+        intro="ARFA is an independent research project on markets, portfolio construction and the structure of long-term capital. This page sets out what it is for, what it believes and how it is written."
         image={images.about}
       />
 
@@ -36,21 +64,21 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={120} className="space-y-6 text-lg leading-relaxed text-ink-soft">
               <p>
-                Many private investors and affluent professionals face the same problem:
-                too much noise, too little structure, and not enough genuinely independent
+                Anyone reading seriously about capital runs into the same problem: too
+                much noise, too little structure, and not enough genuinely independent
                 thinking.
               </p>
               <p>
-                Traditional financial institutions often frame decisions through product
-                shelves, internal incentives or standardised models. Public market
-                commentary, meanwhile, is frequently reactive, shallow or overly
-                transactional. ARFA was built as an alternative to both.
+                Financial institutions tend to frame questions through product shelves,
+                internal incentives or standardised models. Public market commentary,
+                meanwhile, is frequently reactive, shallow or transactional. ARFA was
+                started as an alternative to both.
               </p>
               <p className="text-ink">
-                It is a founder-led boutique platform focused on strategic portfolio
-                thinking, capital architecture and analytical support — helping clients
-                make better decisions, calmly and with a stronger understanding of risk,
-                liquidity, opportunity and long-term direction.
+                It exists to write frameworks down properly — how capital is structured,
+                how allocation decisions are reasoned about, where risk actually sits and
+                what liquidity really costs — for readers who would rather see the
+                reasoning than be handed a conclusion.
               </p>
             </Reveal>
           </div>
@@ -61,7 +89,7 @@ export default function AboutPage() {
       <section className="border-y border-line-soft bg-paper-deep">
         <Container className="py-24 lg:py-32">
           <Reveal>
-            <SectionHeading eyebrow="Philosophy" title="What we believe" className="max-w-2xl" />
+            <SectionHeading eyebrow="Philosophy" title="What this publication believes" className="max-w-2xl" />
           </Reveal>
           <div className="mt-16 grid gap-x-12 gap-y-12 sm:grid-cols-2">
             {philosophy.map(([title, body], i) => (
@@ -75,65 +103,63 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* How ARFA thinks */}
-      <section>
+      {/* Editorial standards */}
+      <section className="bg-night text-paper">
         <Container className="py-24 lg:py-32">
-          <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
-            <Reveal className="space-y-6 text-lg leading-relaxed text-ink-soft">
-              <p>
-                ARFA approaches private capital through a broad strategic lens. We believe
-                in portfolio architecture before product selection, risk awareness before
-                opportunity chasing, and liquidity as a core design principle rather than
-                an afterthought.
-              </p>
-              <p>
-                A good portfolio is not a collection of isolated ideas. It is an
-                integrated system shaped by objectives, time horizon, liquidity needs,
-                currencies, risk tolerance and the broader macro environment.
-              </p>
-              <p className="text-ink">
-                The role of ARFA is to help bring structure, judgment and coherence to
-                that system.
-              </p>
-            </Reveal>
-            <Reveal delay={120} className="lg:order-first">
-              <SectionHeading eyebrow="Method" title="How ARFA thinks" />
-            </Reveal>
+          <Reveal>
+            <span className="eyebrow text-accent">Standards</span>
+            <h2 className="display mt-6 max-w-2xl text-3xl text-paper sm:text-4xl">
+              How the writing is made
+            </h2>
+          </Reveal>
+          <div className="mt-16 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {standards.map((item, i) => (
+              <Reveal key={item.title} delay={(i % 3) * 80}>
+                <div className="rule-accent mb-5" />
+                <h3 className="display text-lg text-paper">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-paper/60">{item.body}</p>
+              </Reveal>
+            ))}
           </div>
         </Container>
       </section>
 
-      {/* Founder-led */}
-      <section className="bg-night text-paper">
+      {/* What it is not */}
+      <section className="bg-paper">
         <Container className="py-24 lg:py-32">
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
             <Reveal>
-              <span className="eyebrow text-accent">By design</span>
-              <h2 className="display mt-6 text-3xl text-paper sm:text-4xl">
-                Founder-led by design
-              </h2>
+              <SectionHeading eyebrow="Scope" title="What ARFA is not" />
             </Reveal>
-            <Reveal delay={120} className="space-y-6 text-lg leading-relaxed text-paper/70">
+            <Reveal delay={120} className="space-y-6 text-lg leading-relaxed text-ink-soft">
               <p>
-                ARFA is intentionally founder-led. Clients are not passed through a
-                generic advisory machine or hidden behind layers of process. The work is
-                guided by direct strategic involvement, intellectual accountability and a
-                high standard of analytical care.
+                ARFA is not an investment firm. It is not authorised or regulated by the
+                Cyprus Securities and Exchange Commission or by any other financial
+                regulator, and it does not act as a tied agent of any regulated firm.
               </p>
-              <p className="text-paper">
-                The platform combines broad market perspective, portfolio experience and
-                modern analytical capability to support clients who expect seriousness,
-                responsiveness and discretion.
+              <p>
+                It provides no investment advice, no personal recommendations, no
+                portfolio management and no client services of any kind. Reading this
+                site, or corresponding with it, creates no client relationship.
+              </p>
+              <p className="text-ink">
+                Decisions about your own capital belong with an appropriately licensed and
+                regulated professional who knows your circumstances.
+              </p>
+              <p>
+                <Link href="/legal" className="link-underline text-ink">
+                  Read the full notice
+                </Link>
               </p>
             </Reveal>
           </div>
         </Container>
       </section>
 
-      <CTABand
-        eyebrow="Begin"
-        title="A trusted long-term thinking partner"
-        body="ARFA is designed for clients who value independent thinking, want a stronger structure around capital, and prefer substance over financial theatre."
+      <ClosingBand
+        eyebrow="Read"
+        title="The reasoning, written out"
+        body="Selective, general commentary on markets, portfolio construction and the structure of long-term capital."
       />
     </>
   );

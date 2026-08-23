@@ -1,7 +1,7 @@
 export const site = {
   name: "ARFA",
-  tagline: "Independent thinking for private capital",
-  email: "enquiries@arfacapital.com",
+  tagline: "Independent research on markets and portfolio structure",
+  email: "editorial@arfacapital.com",
 };
 
 /**
@@ -23,9 +23,7 @@ export const images = {
 
 export const nav = [
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Who We Work With", href: "/who-we-work-with" },
-  { label: "How We Work", href: "/how-we-work" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
+  { label: "Notice", href: "/legal" },
 ];

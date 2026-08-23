@@ -83,7 +83,7 @@ export function Header() {
                 : "border border-paper/30 text-paper hover:border-paper hover:bg-paper hover:text-ink"
             }`}
           >
-            Request a Conversation
+            Subscribe
             <span className="transition-transform duration-300 group-hover:translate-x-0.5">
               →
             </span>
@@ -131,7 +131,7 @@ export function Header() {
             href="/contact"
             className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3.5 text-sm font-medium text-paper"
           >
-            Request a Conversation →
+            Subscribe →
           </Link>
         </nav>
       </div>

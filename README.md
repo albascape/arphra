@@ -1,9 +1,30 @@
 # ARFA
 
-Marketing site for **ARFA** — a founder-led boutique platform focused on private
-capital strategy, portfolio architecture and independent analytical support.
+Site for **ARFA** — an independent research publication on markets, portfolio
+construction and the structure of long-term capital.
 
-> Independent thinking for private capital.
+> Independent research on markets and portfolio structure.
+
+## Scope (read before adding pages)
+
+This site is deliberately limited to publishing general research and commentary.
+It must not describe, offer or imply any regulated investment service —
+investment advice, personal recommendations, portfolio reviews, second opinions
+on proposals or instruments, portfolio management, or client onboarding. Those
+activities require authorisation (CySEC / MiFID II) and were removed from this
+site for that reason.
+
+Practical rules when editing content:
+
+- No services, engagement, pricing, client-intake or "book a call" pages.
+- No client-targeting copy ("who we work with", "our clients", enquiry forms).
+- Contact stays editorial: correspondence about published material and an
+  email-only distribution list. Never collect a reader's circumstances,
+  holdings or objectives — that is intake, and intake is the regulated part.
+- No buy/sell/hold views on specific securities or issuers (market abuse rules).
+- Keep all commentary general — never tailored to an individual reader.
+- The disclaimer in `components/Footer.tsx` and the notice at `/legal` must stay
+  consistent with what the rest of the site actually says.
 
 ## Stack
 
@@ -15,15 +36,13 @@ capital strategy, portfolio architecture and independent analytical support.
 
 ## Pages
 
-| Route                | Page              |
-| -------------------- | ----------------- |
-| `/`                  | Home              |
-| `/about`             | About             |
-| `/services`          | Services          |
-| `/who-we-work-with`  | Who We Work With  |
-| `/how-we-work`       | How We Work       |
-| `/insights`          | Insights          |
-| `/contact`           | Contact           |
+| Route       | Page                                     |
+| ----------- | ---------------------------------------- |
+| `/`         | Home                                     |
+| `/about`    | About (purpose, philosophy, standards)   |
+| `/insights` | Insights (general research notes)        |
+| `/contact`  | Contact (correspondence + subscribe)     |
+| `/legal`    | Notice (scope, disclaimer, terms)        |
 
 ## Local development
 
@@ -62,9 +81,14 @@ built in that spirit — not a copy.
 degrades gracefully if an image fails. Replace them with self-hosted, licensed
 images in `/public` before launch.
 
-### Contact form
+### Correspondence and the distribution list
 
-The contact form currently uses a `mailto:` fallback and a confirmation state. To
-wire it to a real backend (e.g. Resend, Formspree, or a Next.js route handler with
-an email provider), replace the submit handler in
-`components/ContactForm.tsx`.
+There is no enquiry intake by design — a form asking about a reader's situation
+reads as client solicitation. `/contact` offers an editorial mailbox
+(`lib/site.ts → site.email`) and `components/SubscribeForm.tsx`, which collects
+an email address and nothing else.
+
+Both currently use a `mailto:` fallback with a confirmation state. To wire the
+subscribe form to a real backend (Resend, Buttondown, a Next.js route handler),
+replace the submit handler in `components/SubscribeForm.tsx` — and keep the form
+to a single email field.
