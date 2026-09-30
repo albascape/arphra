@@ -1,94 +1,96 @@
-# ARFA
+Arphra
 
-Site for **ARFA** — an independent research publication on markets, portfolio
-construction and the structure of long-term capital.
+Arphra is a financial markets research platform built to help users explore, analyze, and compare market data across securities, issuers, and economic indicators.
 
-> Independent research on markets and portfolio structure.
+The platform brings financial information together in a single research environment, with a particular focus on fixed income and credit markets. Users can explore individual bonds and issuers, review security characteristics and market metrics, screen securities based on different criteria, and connect instrument-level information with broader market and macroeconomic data.
 
-## Scope (read before adding pages)
+Financial Market Research
 
-This site is deliberately limited to publishing general research and commentary.
-It must not describe, offer or imply any regulated investment service —
-investment advice, personal recommendations, portfolio reviews, second opinions
-on proposals or instruments, portfolio management, or client onboarding. Those
-activities require authorisation (CySEC / MiFID II) and were removed from this
-site for that reason.
+Arphra is designed around the workflow of researching a financial instrument and understanding the context around it.
 
-Practical rules when editing content:
+A user can move from an individual security to its issuer, compare securities, examine market and credit characteristics, and then place those observations within a broader economic and market environment.
 
-- No services, engagement, pricing, client-intake or "book a call" pages.
-- No client-targeting copy ("who we work with", "our clients", enquiry forms).
-- Contact stays editorial: correspondence about published material and an
-  email-only distribution list. Never collect a reader's circumstances,
-  holdings or objectives — that is intake, and intake is the regulated part.
-- No buy/sell/hold views on specific securities or issuers (market abuse rules).
-- Keep all commentary general — never tailored to an individual reader.
-- The disclaimer in `components/Footer.tsx` and the notice at `/legal` must stay
-  consistent with what the rest of the site actually says.
+The platform covers areas including:
 
-## Stack
+Bonds and fixed-income securities
 
-- [Next.js 15](https://nextjs.org) (App Router, React 19)
-- [Tailwind CSS v4](https://tailwindcss.com)
-- TypeScript
-- `next/font` (Newsreader + Inter)
-- Optimised for deployment on [Vercel](https://vercel.com)
+Issuers and companies
 
-## Pages
+Credit and ratings
 
-| Route       | Page                                     |
-| ----------- | ---------------------------------------- |
-| `/`         | Home                                     |
-| `/about`    | About (purpose, philosophy, standards)   |
-| `/insights` | Insights (general research notes)        |
-| `/contact`  | Contact (correspondence + subscribe)     |
-| `/legal`    | Notice (scope, disclaimer, terms)        |
+Bond yields and spreads
 
-## Local development
+Coupons and maturities
 
-```bash
-npm install
-npm run dev      # http://localhost:3000
-```
+Security identifiers
 
-## Build
+Market and valuation data
 
-```bash
-npm run build
-npm run start
-```
+Economic indicators
 
-## Deploying to Vercel
+Sovereign and government bond markets
 
-1. Push this repository to GitHub.
-2. In Vercel, **New Project → Import** the repo.
-3. Framework preset is detected automatically (Next.js) — no extra configuration
-   is required.
-4. Deploy.
+Macroeconomic events and releases
 
-### Design notes
+Market screening and discovery
 
-The visual language is institutional and composed: full-bleed dark photographic
-heroes, a classic **Newsreader** serif for display type and Inter for body copy, a
-single confident **blue** accent, and the signature **two-tone heading** (a muted
-grey lead-in resolving into a strong emphasis). Light and dark sections alternate,
-a right-side section-dot navigation tracks scroll position on the home page, and
-circular scroll affordances echo the reference aesthetic. It is an original design
-built in that spirit — not a copy.
+Fixed Income
 
-**Imagery:** the photographic backgrounds are hotlinked from Unsplash's CDN (see
-`lib/site.ts → images`) and each sits over a solid dark base, so the design
-degrades gracefully if an image fails. Replace them with self-hosted, licensed
-images in `/public` before launch.
+Fixed income is a core part of Arphra. Security pages are designed to bring together the information needed to research a bond, rather than requiring users to piece it together from multiple sources.
 
-### Correspondence and the distribution list
+Depending on the security, information can include pricing and yield data, coupon and maturity details, spreads, duration, ratings, identifiers, issuer information, and other analytical characteristics.
 
-There is no enquiry intake by design — a form asking about a reader's situation
-reads as client solicitation. `/contact` offers an editorial mailbox
-(`lib/site.ts → site.email`) and `components/SubscribeForm.tsx`, which collects
-an email address and nothing else.
+Screening & Discovery
 
-Both currently use a `mailto:` fallback with a confirmation state. To wire the
-subscribe form to a real backend (Resend, Buttondown, a Next.js route handler),
-replace the submit handler in `components/SubscribeForm.tsx` — and keep the form
-to a single email field.
+Arphra provides tools for finding securities within a larger market universe.
+
+Screening makes it possible to narrow down instruments using characteristics such as issuer, rating, region, spread, maturity, and other available security or analytical fields.
+
+This allows users to go from a broad set of securities to a smaller group that deserves further research.
+
+Issuer & Security Data
+
+Arphra connects securities with their issuers so that research can be performed at both the instrument and issuer level.
+
+Instead of looking at a bond in isolation, users can investigate the company or organization behind the security and explore related information and instruments.
+
+Economics & Markets
+
+Alongside security-level information, Arphra provides economic and market data that can be used to understand the environment in which securities trade.
+
+The platform includes economic indicators, rates, yield information, market data, and scheduled economic events, helping users connect individual securities with broader market conditions.
+
+Built for Research
+
+Arphra is intended as a research tool rather than simply a collection of financial data.
+
+The platform focuses on making large amounts of financial information easier to discover, navigate, compare, and understand through connected pages, structured data, screening tools, and analytical views.
+
+Core Areas
+
+Securities
+Explore individual financial instruments and their characteristics.
+
+Issuers
+Research companies and organizations behind securities.
+
+Credit
+Review ratings and credit-related information.
+
+Fixed Income
+Analyze bonds, yields, coupons, spreads, maturities, and related characteristics.
+
+Economics
+Follow macroeconomic indicators, releases, rates, and market-moving events.
+
+Markets
+Connect security-level research with broader market data.
+
+Website
+
+{"fallbackMarkdown":"arphra.com
+","reference":{"matched_text":"","prefix":null,"start_idx":3800,"end_idx":3840,"safe_urls":[],"refs":[],"alt":"arphra.com
+","prompt_text":null,"type":"url","item":{"title":"arphra.com","url":"https://www.arphra.com/?utm_source=chatgpt.com","attribution":"arphra.com","pub_date":null,"snippet":null,"attribution_segments":null,"supporting_websites":[],"refs":[],"hue":null,"attributions":null},"title":"arphra.com","layout":null,"logo":null},"showLoginRequiredCard":false}
+
+Arphra brings securities, issuers, markets, and economic data together into one platform for financial research.
+:::{"fallbackMarkdown":"","reference":{"matched_text":" ","prefix":null,"start_idx":3958,"end_idx":3958,"safe_urls":[],"refs":[],"alt":"","prompt_text":null,"type":"sources_footnote","sources":[],"has_images":false},"showLoginRequiredCard":false}
