@@ -89,8 +89,3 @@ Connect security-level research with broader market data.
 Website
 
 {"fallbackMarkdown":"arphra.com
-","reference":{"matched_text":"","prefix":null,"start_idx":3800,"end_idx":3840,"safe_urls":[],"refs":[],"alt":"arphra.com
-","prompt_text":null,"type":"url","item":{"title":"arphra.com","url":"https://www.arphra.com/?utm_source=chatgpt.com","attribution":"arphra.com","pub_date":null,"snippet":null,"attribution_segments":null,"supporting_websites":[],"refs":[],"hue":null,"attributions":null},"title":"arphra.com","layout":null,"logo":null},"showLoginRequiredCard":false}
-
-Arphra brings securities, issuers, markets, and economic data together into one platform for financial research.
-:::{"fallbackMarkdown":"","reference":{"matched_text":" ","prefix":null,"start_idx":3958,"end_idx":3958,"safe_urls":[],"refs":[],"alt":"","prompt_text":null,"type":"sources_footnote","sources":[],"has_images":false},"showLoginRequiredCard":false}
