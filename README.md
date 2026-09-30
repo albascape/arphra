@@ -2,7 +2,7 @@ Arphra
 
 Arphra is a financial markets research and intelligence platform for exploring securities, issuers, fixed-income markets, credit data, and macroeconomic indicators.
 
-🌐 Website: arphra.com
+🌐 Website: <a href="https://www.arphra.com/">Arphra</a>
 
 Arphra brings market and economic information together in one research environment, making it easier to discover financial instruments, investigate issuers, analyze bond characteristics, and understand the broader market and economic context.
 
