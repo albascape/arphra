@@ -88,4 +88,6 @@ Connect security-level research with broader market data.
 
 Website
 
-[{"fallbackMarkdown":"arphra.com](https://www.arphra.com/)
+<a href="https://www.arphra.com/">Arphra</a>
+
+
